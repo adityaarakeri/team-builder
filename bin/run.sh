@@ -15,6 +15,6 @@ do
     then
         echo "Creating an index file"
         echo ""
-        pipenv run python builder.py > index.html
+        pipenv run python builder.py > docs/index.html
     fi
 done

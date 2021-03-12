@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rm -rf index.html
+rm -rf docs/index.html
