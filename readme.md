@@ -4,8 +4,7 @@ Uses Beautiful soup to get the latest tracker details from www.gametracker.com a
 ### Efficacy
 - What is Efficacy
 `the ability to produce a desired or intended result.`
-- How is Efficacy calculated
-**Neo's efficacy algorithm**
+- How is Efficacy calculated: **Neo's efficacy algorithm**
 ```sh
 (Efficacy Coefficient - Time played / Total Score) + Score Per Minute
 ```
