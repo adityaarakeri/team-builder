@@ -1,0 +1,64 @@
+
+/**
+ * @file
+ * Main stylesheet file.
+ */
+
+
+/*****************************************************************************
+ * Main elements
+ ****************************************************************************/
+html {
+  overflow-y: scroll;
+}
+a {
+  cursor: pointer;
+}
+.starter:link, .starter:visited {
+  background-color: rgb(168, 230, 245);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'sans-serif';
+}
+
+.starter:hover, .starter:active {
+  background-color: lightblue;
+}
+
+.figure {
+  background-color: rgb(124, 226, 252);
+  width: auto;
+  justify-content: center;
+}
+
+img.main    {
+  height: 400px;
+  width: 600px;
+}
+::selection {
+  background: #555;
+  color: #FFF;
+}
+::-moz-selection {
+  background: #555;
+  color: #FFF;
+}
+::-webkit-selection {
+  background: #555;
+  color: #FFF;
+}
+
+table {
+  border:1;
+}
+/* Main elements end */
+
+
+/*****************************************************************************
+ * Various other styles
+ ****************************************************************************/
+
+/* Various other styles end */

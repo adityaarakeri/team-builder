@@ -1,0 +1,183 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  display: table;
+  position: absolute;
+  width: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* main {
+  height: 100%;
+  width: 100%;
+  /* position: absolute; */
+/* } */
+
+table { 
+  border-spacing: 2px;
+  border-collapse: separate;
+  /* align-content: center; */
+  width: 100% !important;
+  margin: auto;
+}
+td { 
+  background-color:rgb(231, 247, 250);
+  border: 1px solid gray;
+  padding: 3px;
+  white-space:pre-line;
+  white-space:pre;
+}
+th { 
+  background-color:rgb(255, 253, 248);
+  border: 1px solid gray;
+  padding: 3px;
+  white-space:pre-line;
+  white-space:pre;
+}
+
+/* table Cell alignment  */
+.center-cell {
+  text-align: center;
+}
+.left-cell {
+  text-align: left;
+}
+
+/* Form css start*/
+.form-content-section {
+  background: #fcfcfc;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+/* New */
+.form-only-page .form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-only-page .form .form-heading,
+.form-only-page .form .checkbox {
+  margin-bottom: 10px;
+}
+.form-only-page .form .checkbox {
+  font-weight: normal;
+}
+.form-only-page .form .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-only-page .form .form-control:focus {
+  z-index: 2;
+}
+.form-only-page .form input[type="text"],
+.form-only-page .form input[type="password"] {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+.form-only-page .form input.first-input {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.form-only-page .form input.last-input {
+  margin-bottom: 10px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.form-only-page .back-home {
+  margin-top: 10px;
+}
+/* Form css End */
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 5px 5px;
+}
+
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/* Vertical alignment */
+.vertical-center {
+  padding-top: 20px;
+}
+
+/* test link */
+.bottom {
+  position: absolute;
+  right: 0;
+  left: 80px;
+  bottom: 70px;
+  padding: 1rem;
+  padding-bottom: 0px;
+  /* justify-content: left; */
+}
+
+/* Social icon */
+.wrapper {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  padding-top: 10px;
+  bottom: 50px;
+
+}
+.wrapper i {
+  /* padding: 10px; */
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+.list-unstyled {
+  /* padding-left: 0; */
+  padding-bottom: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+.wrapper i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
