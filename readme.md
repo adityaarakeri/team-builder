@@ -1,4 +1,4 @@
-#### Counter Strike Player Stats
+### Counter Strike Player Stats
 Uses Beautiful soup to get the latest tracker details from www.gametracker.com and calcuate the Efficacy of each player
 
 ### Efficacy
