@@ -1,0 +1,32 @@
+{% extends '/base.html' %}
+{% block title %}Version Map{% endblock %}
+{% block content %}
+
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped" style="margin-top:60px;">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th style="width: 25%">#</th>
+                <th style="width: 25%" >Name</th>
+                <th style="width: 25%">Efficacy</th>
+            </tr>
+        </thead>
+
+            {% for index, tuple in player_map %}
+                <tr>
+                    <th >{{ index+1 }}</th>
+                    <td >{{ tuple[0] }}</td>
+                    <td >{{ tuple[1] }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+</div>
+
+    <br>
+    <div class="text-muted">
+        Last Updated: {{ last_updated }}
+    </div>
+    <br>
+
+{% endblock %}
