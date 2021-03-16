@@ -51,13 +51,13 @@ def clean_map(player_map):
     updated_map = {}
 
     # self
-    neo = ['neo', 'neo ~', 'zxc', 'ñeø', 'zxc [DGL.mode]', 'ne0', '0_o']
+    neo = ['neo', 'neo ~', 'zxc', 'ñeø', 'zxc [DGL.mode]', 'ne0', '0_o', 'brzrkr']
 
     # secret
-    secret = ['Secret105v','Secret', 'Secret105v #NoSound']
+    secret = ['Secret105v', 'Secret105v #NoSound']
 
     # pom
-    pom = ['Pom Pom M4n.', 'Drunken Monkey', 'Johnny Sins!']
+    pom = ['Pom Pom M4n.', 'Drunken Monkey', 'Johnny Sins!', 'Johnny sins', 'Viper']
 
     neo_scores = []
     secret_scores = []
@@ -73,7 +73,7 @@ def clean_map(player_map):
         else:
             updated_map[player] = efficacy
     
-    # dumb but its all i got
+    # # dumb but its all i got
     neo_efficacy = average(neo_scores)
     pom_efficacy = average(pom_scores)
     secret_efficacy = average(secret_scores)
@@ -84,12 +84,24 @@ def clean_map(player_map):
     updated_map['Pom Pom M4n.'] = pom_efficacy
     updated_map['Secret105v'] = secret_efficacy
 
-    # remove folks who are not joining
-    remove_list = ['Fluttershy', 'Tony', 'Hmmm', 'Master-User', 'Dinga']
-    for item in remove_list:
-        del updated_map[item]
+    # exists list
+    # better way to find with just existing names
+    constant_list = ['neo', 'Secret105v', 'Pom Pom M4n.', 'Xhosa', 'NoFea[r]wOw', 'r0B[i]n wOw~', 'LeThAl', 'Blitz', 
+    'Sparky', 'Point Blank', 'Adheera', 'Roman', 'eXCALIBUr', 'Hector', 'alamaleste', '<<OptimusPrime>>', 
+    'Glady', 'ZeR0_CoOL', 'BerLin', 'CSK', 'Ethan', 'Skull_Crusher']
 
-    return updated_map
+    # clean up the list in a better way
+    new_map = {}
+    for player, efficacy in player_map.items():
+        if player in constant_list:
+            new_map[player] = efficacy
+
+    # remove folks who are not joining
+    # remove_list = ['Fluttershy', 'Tony', 'Hmmm', 'Master-User', 'Dinga', 'Leosa', 'Leaving in 10', 'HBD Adheera']
+    # for item in remove_list:
+    #     del updated_map[item]
+
+    return new_map
 
 
 # Main
