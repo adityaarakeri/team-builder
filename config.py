@@ -3,8 +3,8 @@ import datetime
 class Config:
     # server details
     server_ip='108.61.124.73:27035'
-    red_channel='https://discord.gg/REgMMwKr'
-    blue_channel='https://discord.gg/wTvZB4ZK'
+    red_channel='https://discord.gg/QZBmNKd3ry'
+    blue_channel='https://discord.gg/kAg8Du5wd4'
     fy_aim_maps=[
         'fy_snow',
         'aim_headshot'
