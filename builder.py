@@ -8,14 +8,21 @@ urllib3.disable_warnings()
 
 from flask import Flask, render_template
 
+from config import Config
+
 # instantiate the app
 app = Flask('app')
+# config
+conf = Config()
+
 
 ## Defaults
 # set the current time
-current_datetime = datetime.datetime.now().strftime('%m-%d-%Y %H:%M:%S')
+# current_datetime = datetime.datetime.now().strftime('%m-%d-%Y %H:%M:%S')
+current_datetime = conf.current_datetime
 # current gametracker url
-URL = 'https://www.gametracker.com/server_info/108.61.124.73:27035/top_players/?sort=1&order=DESC&searchipp=50'
+# URL = 'https://www.gametracker.com/server_info/108.61.124.73:27035/top_players/?sort=1&order=DESC&searchipp=50'
+URL = conf.gametrack_url
 
 
 
@@ -51,13 +58,16 @@ def clean_map(player_map):
     updated_map = {}
 
     # self
-    neo = ['neo', 'neo ~', 'zxc', 'ñeø', 'zxc [DGL.mode]', 'ne0', '0_o', 'brzrkr']
+    # neo = ['neo', 'neo ~', 'zxc', 'ñeø', 'zxc [DGL.mode]', 'ne0', '0_o', 'brzrkr']
+    neo = conf.neo_anom
 
     # secret
-    secret = ['Secret105v', 'Secret105v #NoSound']
+    # secret = ['Secret105v', 'Secret105v #NoSound']
+    secret = conf.secret_anom
 
     # pom
-    pom = ['Pom Pom M4n.', 'Drunken Monkey', 'Johnny Sins!', 'Johnny sins', 'Viper']
+    # pom = ['Pom Pom M4n.', 'Drunken Monkey', 'Johnny Sins!', 'Johnny sins', 'Viper']
+    pom = conf.pom_anom
 
     neo_scores = []
     secret_scores = []
@@ -86,9 +96,10 @@ def clean_map(player_map):
 
     # exists list
     # better way to find with just existing names
-    constant_list = ['neo', 'Secret105v', 'Pom Pom M4n.', 'Xhosa', 'NoFea[r]wOw', 'r0B[i]n wOw~', 'LeThAl', 'Blitz', 
-    'Sparky', 'Point Blank', 'Adheera', 'Roman', 'eXCALIBUr', 'Hector', 'alamaleste', '<<OptimusPrime>>', 
-    'Glady', 'ZeR0_CoOL', 'BerLin', 'CSK', 'Ethan', 'Skull_Crusher']
+    # constant_list = ['neo', 'Secret105v', 'Pom Pom M4n.', 'Xhosa', 'NoFea[r]wOw', 'r0B[i]n wOw~', 'LeThAl', 'Blitz', 
+    # 'Sparky', 'Point Blank', 'Adheera', 'Roman', 'eXCALIBUr', 'Hector', 'alamaleste', '<<OptimusPrime>>', 
+    # 'Glady', 'ZeR0_CoOL', 'BerLin', 'CSK', 'Ethan', 'Skull_Crusher']
+    constant_list = conf.constant_list
 
     # clean up the list in a better way
     new_map = {}
@@ -145,6 +156,13 @@ if __name__ == "__main__":
         rendered = render_template('index.html', \
             title = "Player Stats", \
             player_map = enumerate(sorted_map.items()), \
-            last_updated = current_datetime)
+            last_updated = current_datetime, \
+            server_ip = conf.server_ip, \
+            red_channel = conf.red_channel, \
+            blue_channel = conf.blue_channel, \
+            fy_aim_maps = conf.fy_aim_maps, \
+            comp_maps = conf.comp_maps, \
+            drop_box_link = conf.dropbox_link, \
+                )
         # print it to stdout which will be piped later
         print(rendered)

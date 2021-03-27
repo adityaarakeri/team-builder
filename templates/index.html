@@ -2,9 +2,92 @@
 {% block title %}Version Map{% endblock %}
 {% block content %}
 
+<div class="table-responsive">
+    <table class="table table-bordered table-striped" style="margin-top:60px;">
+
+        <thead class="bg-dark text-light">
+            <tr>
+                <th >Game Info: </th>
+            </tr>
+        </thead>
+        <tr>
+          <th > Server Ip</th>
+          <td > {{ server_ip }} </td>
+        </tr>
+        <br>
+        <thead class="bg-dark text-light">
+        <tr>
+            <th >Discord Channels </th>
+        </tr>
+        </thead>
+        <tr>
+          <th > Blue channel</th>
+          <td > <a class="btn btn-primary" href="{{ blue_channel }}" role="button">Join</a>  </td>
+        </tr>
+        <tr>
+          <th > Red channel</th>
+          <td > <a class="btn btn-danger" href="{{ red_channel }}" role="button">Join</a>  </td>
+        </tr>
+        <thead class="bg-dark text-light">
+          <tr>
+              <th > Fy and Aim Maps </th>
+          </tr>
+        </thead>
+        {% for map in fy_aim_maps %}
+                <tr>
+                    <td >{{ map }}</td>
+                </tr>
+        {% endfor %}
+        
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > Competitive Maps </th>
+            </tr>
+          </thead>
+          {% for map in comp_maps %}
+          <tr>
+              <td >{{ map }}</td>
+          </tr>
+            {% endfor %}
+
+        
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > dropbox links </th>
+            </tr>
+        </thead>
+        <tr>
+            <th > maps and config </th>
+            <td > <a class="btn btn-primary" href="{{ drop_box_link }}" role="button">download</a> </td>
+        </tr>
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > server config </th>
+            </tr>
+        </thead>
+        <tr>
+            <th > clan setup</th>
+            <td > <code>
+                rcon exec clan.cfg
+            </code>  </td>
+        </tr>
+        <tr>
+            <th > pub setup</th>
+            <td > <code>
+                rcon exec pub.cfg
+            </code>  </td>
+        </tr>
+    </table>
+</div>
+
 
 <div class="table-responsive">
     <table class="table table-bordered table-striped" style="margin-top:60px;">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th> Player Stats</th>
+            </tr>
+        </thead>
         <thead class="bg-dark text-light">
             <tr>
                 <th style="width: 25%">#</th>
