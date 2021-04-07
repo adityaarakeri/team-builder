@@ -22,6 +22,8 @@ class Config:
     gametrack_url = f'https://www.gametracker.com/server_info/{server_ip}/top_players/?sort=1&order=DESC&searchipp=50'
 
     # list of players who join regularly
+    # the names have to be unique
+    # if any player chanages their name often it should be noted
     constant_list = [
         'neo', 
         'Secret105v', 
@@ -59,7 +61,10 @@ class Config:
         'brzrkr'
     ]
 
-    secret_anom = ['Secret105v', 'Secret105v #NoSound']
+    secret_anom = [
+        'Secret105v', 
+        'Secret105v #NoSound'
+    ]
 
     pom_anom = [
         'Pom Pom M4n.', 
