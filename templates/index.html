@@ -96,17 +96,19 @@
         </thead>
         <thead class="bg-dark text-light">
             <tr>
-                <th style="width: 25%">#</th>
-                <th style="width: 25%" >Name</th>
-                <th style="width: 25%">Efficacy</th>
+                <th class="align-middle" style="width: 10%">#</th>
+                <th class="align-middle" style="width: 25%">Name</th>
+                <th class="align-middle" style="width: 15%">Efficacy</th>
+                <th class="align-middle" style="width: 15%">Change</th>
             </tr>
         </thead>
 
-            {% for index, tuple in player_map %}
+            {% for index, value in final_list %}
                 <tr>
-                    <th >{{ index+1 }}</th>
-                    <td >{{ tuple[0] }}</td>
-                    <td >{{ tuple[1] }}</td>
+                    <th class="align-middle" >{{ index+1 }}</th>
+                    <td class="align-middle" >{{ value['name'] }}</td>
+                    <td class="align-middle">{{ value['efficacy'] }}</td>
+                    <td class="align-middle"><img src="../static/img/{{ value['change']}}.png" width="25" height="25" alt="{{ value['change'] }}" title="{{ value['diff'] }}"></td>
                 </tr>
             {% endfor %}
     </table>
