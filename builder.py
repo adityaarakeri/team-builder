@@ -8,17 +8,20 @@ urllib3.disable_warnings()
 
 from flask import Flask, render_template
 
+# local
 from config import Config
+from db import Player_DB
 
 # instantiate the app
 app = Flask('app')
 # config
 conf = Config()
+# db
+player_db = Player_DB()
 
 
 ## Defaults
 # set the current time
-# current_datetime = datetime.datetime.now().strftime('%m-%d-%Y %H:%M:%S')
 current_datetime = conf.current_datetime
 # current gametracker url
 # URL = 'https://www.gametracker.com/server_info/108.61.124.73:27035/top_players/?sort=1&order=DESC&searchipp=50'
@@ -58,15 +61,12 @@ def clean_map(player_map):
     updated_map = {}
 
     # self
-    # neo = ['neo', 'neo ~', 'zxc', 'ñeø', 'zxc [DGL.mode]', 'ne0', '0_o', 'brzrkr']
     neo = conf.neo_anom
 
     # secret
-    # secret = ['Secret105v', 'Secret105v #NoSound']
     secret = conf.secret_anom
 
     # pom
-    # pom = ['Pom Pom M4n.', 'Drunken Monkey', 'Johnny Sins!', 'Johnny sins', 'Viper']
     pom = conf.pom_anom
 
     neo_scores = []
@@ -96,23 +96,21 @@ def clean_map(player_map):
 
     # exists list
     # better way to find with just existing names
-    # constant_list = ['neo', 'Secret105v', 'Pom Pom M4n.', 'Xhosa', 'NoFea[r]wOw', 'r0B[i]n wOw~', 'LeThAl', 'Blitz', 
-    # 'Sparky', 'Point Blank', 'Adheera', 'Roman', 'eXCALIBUr', 'Hector', 'alamaleste', '<<OptimusPrime>>', 
-    # 'Glady', 'ZeR0_CoOL', 'BerLin', 'CSK', 'Ethan', 'Skull_Crusher']
     constant_list = conf.constant_list
 
     # clean up the list in a better way
-    new_map = {}
+    player_list = []
+    # new_map = {}
     for player, efficacy in player_map.items():
+        new_map = {}
         if player in constant_list:
-            new_map[player] = efficacy
+            new_map['name'] = player
+            new_map['efficacy'] = efficacy
+            player_list.append(new_map)
 
-    # remove folks who are not joining
-    # remove_list = ['Fluttershy', 'Tony', 'Hmmm', 'Master-User', 'Dinga', 'Leosa', 'Leaving in 10', 'HBD Adheera']
-    # for item in remove_list:
-    #     del updated_map[item]
 
-    return new_map
+    # return new_map
+    return player_list
 
 
 # Main
@@ -146,16 +144,53 @@ if __name__ == "__main__":
             # map name to score, timeplayed and score/min
             player_map[name] = calculate_efficacy(score, time, score_per_min)
 
+    # sort the map
+    sorted_map = OrderedDict(sorted(player_map.items(), key=lambda x: x[1], reverse=True))
+
     # update and clean the player map
-    updated_map = clean_map(player_map)
-    # sort it appropriatly
-    sorted_map = OrderedDict(sorted(updated_map.items(), key=lambda x: x[1], reverse=True))
+    # updated_map = clean_map(player_map)
+    updated_player_list = clean_map(sorted_map)
+
+    # final list
+    final_player_list = []
+
+    # new logic to calculate efficacy increase/decrese
+    for item in updated_player_list:
+        # add a player if he does not exist
+        if player_db.search(item['name']) == []:
+            player_db.insert(item)
+        else:
+            
+            # new efficacy
+            new_eff = item['efficacy']
+            # get the old efficacy
+            old_eff = player_db.search(item['name'])[0]['efficacy']
+            # difference
+            change_eff = new_eff - old_eff
+            # setting defult to constant
+            change_value = 'constant'
+            # print(f"Player: {item['name']} Old eff: {old_eff}  New eff: {new_eff}")
+            # print(f"Increase/Decrese in Efficacy: {(new_eff - old_eff)}")
+            if change_eff > 0:
+                change_value = 'improved'
+            elif change_eff < 0:
+                change_value = 'degraded'
+            else:
+                change_value = 'constant'
+
+        # update the db with new eff
+        player_db.update(new_eff, item['name'])
+
+        # add the change_value to final
+        item['change'] = change_value
+        item['diff'] = change_eff
+        final_player_list.append(item)
 
     # flask it
     with app.app_context():
         rendered = render_template('index.html', \
             title = "Player Stats", \
-            player_map = enumerate(sorted_map.items()), \
+            final_list = enumerate(final_player_list), \
             last_updated = current_datetime, \
             server_ip = conf.server_ip, \
             red_channel = conf.red_channel, \

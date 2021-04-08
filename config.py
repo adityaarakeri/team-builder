@@ -56,7 +56,7 @@ class Config:
         'zxc', 
         'ñeø', 
         'zxc [DGL.mode]', 
-        'ne0', 
+        # 'ne0', 
         '0_o', 
         'brzrkr'
     ]
@@ -68,7 +68,7 @@ class Config:
 
     pom_anom = [
         'Pom Pom M4n.', 
-        'Drunken Monkey', 
+        # 'Drunken Monkey', 
         'Johnny Sins!', 
         'Johnny sins', 
         'Viper'
