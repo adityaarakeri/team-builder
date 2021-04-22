@@ -56,7 +56,8 @@ class Config:
         'zxc', 
         'ñeø', 
         'zxc [DGL.mode]', 
-        'brzrkr'
+        'brzrkr',
+        'klu'
     ]
 
     secret_anom = [
