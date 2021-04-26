@@ -46,7 +46,8 @@ class Config:
         'BerLin', 
         'CSK', 
         'Ethan', 
-        'Skull_Crusher'
+        'Skull_Crusher',
+        'DEE'
     ]
 
     # anomalies that cause due to a player having different names
