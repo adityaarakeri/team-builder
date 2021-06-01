@@ -47,7 +47,8 @@ class Config:
         'CSK', 
         'Ethan', 
         'Skull_Crusher',
-        'DEE'
+        'DEE',
+        'MaxSteel'
     ]
 
     # anomalies that cause due to a player having different names
