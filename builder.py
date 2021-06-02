@@ -179,7 +179,7 @@ if __name__ == "__main__":
                 change_value = 'constant'
 
         # update the db with new eff
-        player_db.update(new_eff, item['name'])
+        player_db.update(item['name'], new_eff)
 
         # add the change_value to final
         item['change'] = change_value
