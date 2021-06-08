@@ -6,18 +6,66 @@ class Config:
     red_channel='https://discord.gg/QZBmNKd3ry'
     blue_channel='https://discord.gg/kAg8Du5wd4'
     fy_aim_maps=[
+        '$3000$_b1',
+        '32_aztecworld',
+        'aim_headshot',
+        'aim_map',
+        'aim_ak-colt',
+        'aim_deagle',
+        'Aim_map_usp',
         'fy_snow',
-        'aim_headshot'
+        'fy_snow3',
+        'fy_snow_dino',
+        'fy_snow_dew',
+        'fy_dustworld2010',
+        'fy_dustworld2_x',
+        'fy_gravemake',
+        'fy_hotspot',
+        'fy_icevalley',
+        'fy_aztec_mini',
+        'fy_aztecworld'
+
     ]
-    comp_maps=[
+    awp_maps=[
+        'awp_india',
+        'awp_india2',
+        'awp_inferno',
+        'awp_fightyard',
+        'awp_greatwalls',
+        'awp_highrated',
+        'awp_white',
+        'awp_city2',
+        'awp_bycaster_dust',
+        'awp_concrete',
+        'css_vietnam',
+    ]
+    twoxtwo_maps=[
+        'de_dust2_2x2',
+        'css_mirage2x2_go',
+        'de_inferno2x2',
+        'de_nuke2x2',
+    ]
+    old_comp_maps=[
         'de_dust2',
         'de_inferno',
         'de_nuke',
         'de_train',
         'de_mirage',
         'de_tuscan',
+        'de_hell',
+        'de_cbble',
+        'de_forze',
+        'de_aztec',
+    ]
+    new_comp_maps=[
+        'css_dust2se_go',
+        'csg_nuke',
+        'css_mirage_go',
         'de_cache',
         'css_overpass',
+        'css_train_go',
+        'go_vertigo_classic',
+        'css_cbble',
     ]
     gametrack_url = f'https://www.gametracker.com/server_info/{server_ip}/top_players/?sort=1&order=DESC&searchipp=50'
 

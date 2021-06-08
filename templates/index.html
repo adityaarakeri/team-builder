@@ -38,16 +38,48 @@
                     <td >{{ map }}</td>
                 </tr>
         {% endfor %}
+
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > Awp Maps </th>
+            </tr>
+          </thead>
+          {% for map in awp_maps %}
+                  <tr>
+                      <td >{{ map }}</td>
+                  </tr>
+          {% endfor %}
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > 2 x 2 Maps </th>
+            </tr>
+          </thead>
+          {% for map in twoxtwo_maps %}
+                  <tr>
+                      <td >{{ map }}</td>
+                  </tr>
+          {% endfor %}
         
         <thead class="bg-dark text-light">
             <tr>
-                <th > Competitive Maps </th>
+                <th > Old Competitive Maps </th>
             </tr>
           </thead>
-          {% for map in comp_maps %}
+          {% for map in old_comp_maps %}
           <tr>
               <td >{{ map }}</td>
           </tr>
+            {% endfor %}
+        
+        <thead class="bg-dark text-light">
+            <tr>
+                <th > New Competitive Maps </th>
+            </tr>
+            </thead>
+            {% for map in new_comp_maps %}
+            <tr>
+                <td >{{ map }}</td>
+            </tr>
             {% endfor %}
 
         

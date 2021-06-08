@@ -196,7 +196,10 @@ if __name__ == "__main__":
             red_channel = conf.red_channel, \
             blue_channel = conf.blue_channel, \
             fy_aim_maps = conf.fy_aim_maps, \
-            comp_maps = conf.comp_maps, \
+            awp_maps = conf.awp_maps, \
+            twoxtwo_maps = conf.twoxtwo_maps, \
+            old_comp_maps = conf.old_comp_maps, \
+            new_comp_maps = conf.new_comp_maps, \
             drop_box_link = conf.dropbox_link, \
                 )
         # print it to stdout which will be piped later
