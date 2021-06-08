@@ -1,0 +1,52 @@
+name: GitHub Auto update
+on:
+  # Scheduled to run at midnight every night
+  schedule:
+    - cron:  '0 0 * * *'
+  # push changes on every pull request created
+  pull_request:
+  push:
+    branches:
+      - "main"
+jobs:
+  builder:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repo
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          # checkout the latest head 
+          ref: ${{ github.head_ref }}
+          # use the token
+          token: ${{ secrets.TOKEN }}
+      
+      # Setup Python 3.x
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      # Install dependencies from pipenv
+      - name: Install dependecies
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: install -d
+      
+      # Build the github pages
+      - name: Build
+        run: |
+          pipenv run python builder.py > docs/index.html
+      
+      # Automatically update the repository
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # commit message to be used
+          commit_message: Auto update
+          # files to be updated
+          file_patter: db.json docs/index.html
+          # See https://git-scm.com/docs/git-push#_options
+          push_options: '--force'
+          # Optional. Disable dirty check and always try to create a commit and push
+          skip_dirty_check: true  
+
