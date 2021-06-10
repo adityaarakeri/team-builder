@@ -2,152 +2,164 @@
 {% block title %}Version Map{% endblock %}
 {% block content %}
 
-<div class="table-responsive">
-    <table class="table table-bordered table-striped" style="margin-top:60px;">
+<div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Server Info
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
+                    <tr>
+                      <th > Server Ip</th>
+                      <td > {{ server_ip }} </td>
+                    </tr>
+                    <br>
 
-        <thead class="bg-dark text-light">
-            <tr>
-                <th >Game Info: </th>
-            </tr>
-        </thead>
-        <tr>
-          <th > Server Ip</th>
-          <td > {{ server_ip }} </td>
-        </tr>
-        <br>
-        <thead class="bg-dark text-light">
-        <tr>
-            <th >Discord Channels </th>
-        </tr>
-        </thead>
-        <tr>
-          <th > Blue channel</th>
-          <td > <a class="btn btn-primary" href="{{ blue_channel }}" role="button">Join</a>  </td>
-        </tr>
-        <tr>
-          <th > Red channel</th>
-          <td > <a class="btn btn-danger" href="{{ red_channel }}" role="button">Join</a>  </td>
-        </tr>
-        <thead class="bg-dark text-light">
-          <tr>
-              <th > Fy and Aim Maps </th>
-          </tr>
-        </thead>
-        {% for map in fy_aim_maps %}
-                <tr>
-                    <td >{{ map }}</td>
-                </tr>
-        {% endfor %}
+                    <tr>
+                      <th > Blue Discord channel</th>
+                      <td > <a class="btn btn-primary" href="{{ blue_channel }}" role="button">Join</a>  </td>
+                    </tr>
+                    <tr>
+                      <th > Red Discord channel</th>
+                      <td > <a class="btn btn-danger" href="{{ red_channel }}" role="button">Join</a>  </td>
+                    </tr>
+                    <tr>
+                        <th > Drop box link to maps </th>
+                        <td > <a class="btn btn-primary" href="{{ drop_box_link }}" role="button">download</a> </td>
+                    </tr>
 
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > Awp Maps </th>
-            </tr>
-          </thead>
-          {% for map in awp_maps %}
-                  <tr>
-                      <td >{{ map }}</td>
-                  </tr>
-          {% endfor %}
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > 2 x 2 Maps </th>
-            </tr>
-          </thead>
-          {% for map in twoxtwo_maps %}
-                  <tr>
-                      <td >{{ map }}</td>
-                  </tr>
-          {% endfor %}
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > Old Competitive Maps </th>
-            </tr>
-          </thead>
-          {% for map in old_comp_maps %}
-          <tr>
-              <td >{{ map }}</td>
-          </tr>
-            {% endfor %}
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > New Competitive Maps </th>
-            </tr>
-            </thead>
-            {% for map in new_comp_maps %}
-            <tr>
-                <td >{{ map }}</td>
-            </tr>
-            {% endfor %}
+                    <tr>
+                        <th > clan setup</th>
+                        <td > <code>
+                            rcon exec clan.cfg
+                        </code>  </td>
+                    </tr>
+                    <tr>
+                        <th > pub setup</th>
+                        <td > <code>
+                            rcon exec pub.cfg
+                        </code>  </td>
+                    </tr>
+                    <tr>
+                        <th > change map</th>
+                        <td > <code>
+                            rcon changelevel map_name
+                        </code>  </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Maps
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
+                      <tr>
+                          <th > Fy and Aim Maps </th>
+                          <td>
+                            <p>
+                                <ul class="list-unstyled">
+                                    {% for map in fy_aim_maps %}
+                                    <li>{{ map }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                          </td>
+                        
+                    </tr>
+                    
+                        <tr>
+                            <th > Old Competitive Maps </th>
+                            <td>
+                                <p> 
+                                    <ul class="list-unstyled">
+                                    {% for map in old_comp_maps %}
+                                    <li>{{ map }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                    
+                                </p>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <th > New Competitive Maps </th>
+                               <td>
+                                <p> 
+                                <ul class="list-unstyled">
+                                    {% for map in new_comp_maps %}
+                                    <li>{{ map }}</li>
+                                    {% endfor %}
+                                </ul>
+                                </p>
+                               </td> 
+                                
+                            </tr>
+                        
+            
 
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > dropbox links </th>
-            </tr>
-        </thead>
-        <tr>
-            <th > maps and config </th>
-            <td > <a class="btn btn-primary" href="{{ drop_box_link }}" role="button">download</a> </td>
-        </tr>
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > server config </th>
-            </tr>
-        </thead>
-        <tr>
-            <th > clan setup</th>
-            <td > <code>
-                rcon exec clan.cfg
-            </code>  </td>
-        </tr>
-        <tr>
-            <th > pub setup</th>
-            <td > <code>
-                rcon exec pub.cfg
-            </code>  </td>
-        </tr>
-        <tr>
-            <th > change map</th>
-            <td > <code>
-                rcon changelevel map_name
-            </code>  </td>
-        </tr>
-    </table>
-</div>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Player Stats
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
 
-
-<div class="table-responsive">
-    <table class="table table-bordered table-striped" style="margin-top:60px;">
-        <thead class="bg-dark text-light">
-            <tr>
-                <th> Player Stats</th>
-            </tr>
-        </thead>
-        <thead class="bg-dark text-light">
-            <tr>
-                <th class="align-middle" style="width: 10%">#</th>
-                <th class="align-middle" style="width: 25%">Name</th>
-                <th class="align-middle" style="width: 15%">Efficacy</th>
-                <th class="align-middle" style="width: 15%">Change</th>
-            </tr>
-        </thead>
-
-            {% for index, value in final_list %}
-                <tr>
-                    <th class="align-middle" >{{ index+1 }}</th>
-                    <td class="align-middle" >{{ value['name'] }}</td>
-                    <td class="align-middle">{{ value['efficacy'] }}</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/{{ value['change']}}.png" width="25" height="25" alt="{{ value['change'] }}" title="{{ value['diff'] }}"></td>
-                </tr>
-            {% endfor %}
-    </table>
-</div>
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th class="align-middle" style="width: 10%">#</th>
+                            <th class="align-middle" style="width: 25%">Name</th>
+                            <th class="align-middle" style="width: 15%">Efficacy</th>
+                            <th class="align-middle" style="width: 15%">Change</th>
+                        </tr>
+                    </thead>
+            
+                        {% for index, value in final_list %}
+                            <tr>
+                                <th class="align-middle" >{{ index+1 }}</th>
+                                <td class="align-middle" >{{ value['name'] }}</td>
+                                <td class="align-middle">{{ value['efficacy'] }}</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/{{ value['change']}}.png" width="25" height="25" alt="{{ value['change'] }}" title="{{ value['diff'] }}"></td>
+                            </tr>
+                        {% endfor %}
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <br>
-    <div class="text-muted">
+    <div class="text-muted text-center">
         Last Updated: {{ last_updated }}
     </div>
     <br>
