@@ -34,7 +34,7 @@ jobs:
       # Install dependencies from pipenv
       - name: Install dependecies
         run: |
-          python -m pip install --upgrade pip && pip install requirements.txt
+          python -m pip install --upgrade pip && pip install -r requirements.txt
       
       # Build the github pages
       - name: Build
