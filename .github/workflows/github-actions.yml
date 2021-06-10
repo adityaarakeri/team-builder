@@ -4,10 +4,10 @@ on:
   schedule:
     - cron:  '0 6 * * *'
   # push changes on every pull request created
-  pull_request:
-  push:
-    branches:
-      - "main"
+  # pull_request:
+  # push:
+  #   branches:
+  #     - "main"
 jobs:
   builder:
     runs-on: ubuntu-latest
