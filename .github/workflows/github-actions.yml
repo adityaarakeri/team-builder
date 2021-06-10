@@ -2,7 +2,7 @@ name: GitHub Auto update
 on:
   # Scheduled to run at midnight every night
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 6 * * *'
   # push changes on every pull request created
   pull_request:
   push:
@@ -27,16 +27,19 @@ jobs:
         with:
           python-version: '3.x'
       
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      
       # Install dependencies from pipenv
       - name: Install dependecies
-        uses: VaultVulp/action-pipenv@v2.0.1
-        with:
-          command: install -d
+        run: |
+          python -m pip install --upgrade pip && pip install -r requirements.txt
       
       # Build the github pages
       - name: Build
         run: |
-          pipenv run python builder.py > docs/index.html
+          python builder.py > docs/index.html
       
       # Automatically update the repository
       - uses: stefanzweifel/git-auto-commit-action@v4

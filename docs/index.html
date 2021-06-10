@@ -13,7 +13,18 @@
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
     <style>
-  
+
+      .jumbotron {
+              background-image: url("https://wallpapercave.com/wp/wp2726662.jpg");
+              background-size: cover;
+              }
+      body {
+          background-image: url("https://images.unsplash.com/photo-1554876306-5b1fa0c884e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1268&q=80");
+          background-size: cover;
+      }
+      main {
+            background-color: white;
+        }
       table, th, td {
         /* border: 1px solid black; */
         border-collapse: collapse;
@@ -30,9 +41,14 @@
     <title>Counter strike 1.6</title>
   </head>
   <body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center text-success font-weight-bold bd-dark">
+      <h1>Enter The Matrix</h1>
+    </div>
     
-    <header>
-        <!-- Fixed navbar -->
+    <!-- Fixed navbar -->
+    <!-- <header>
         <div class="container">
                 <nav class="navbar navbar-expand-sm bg-light navbar-dark justify-content-end">
                     <ul class="nav navbar-nav mx-auto">
@@ -40,9 +56,8 @@
                     </ul>
                 </nav>
             </div>
-        <!-- Navbar ends -->
-        </header>
-        <!-- Navbar ends -->
+    </header> -->
+          <!-- Navbar ends -->
 
         <!-- Begin page content -->
         <main id="content" role="main" class="container">
@@ -50,498 +65,392 @@
             <!-- template content -->
             
 
-<div class="table-responsive">
-    <table class="table table-bordered table-striped" style="margin-top:60px;">
+<div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Server Info
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
+                    <tr>
+                      <th > Server Ip</th>
+                      <td > 108.61.124.73:27035 </td>
+                    </tr>
+                    <br>
 
-        <thead class="bg-dark text-light">
-            <tr>
-                <th >Game Info: </th>
-            </tr>
-        </thead>
-        <tr>
-          <th > Server Ip</th>
-          <td > 108.61.124.73:27035 </td>
-        </tr>
-        <br>
-        <thead class="bg-dark text-light">
-        <tr>
-            <th >Discord Channels </th>
-        </tr>
-        </thead>
-        <tr>
-          <th > Blue channel</th>
-          <td > <a class="btn btn-primary" href="https://discord.gg/kAg8Du5wd4" role="button">Join</a>  </td>
-        </tr>
-        <tr>
-          <th > Red channel</th>
-          <td > <a class="btn btn-danger" href="https://discord.gg/QZBmNKd3ry" role="button">Join</a>  </td>
-        </tr>
-        <thead class="bg-dark text-light">
-          <tr>
-              <th > Fy and Aim Maps </th>
-          </tr>
-        </thead>
-        
-                <tr>
-                    <td >$3000$_b1</td>
-                </tr>
-        
-                <tr>
-                    <td >32_aztecworld</td>
-                </tr>
-        
-                <tr>
-                    <td >aim_headshot</td>
-                </tr>
-        
-                <tr>
-                    <td >aim_map</td>
-                </tr>
-        
-                <tr>
-                    <td >aim_ak-colt</td>
-                </tr>
-        
-                <tr>
-                    <td >aim_deagle</td>
-                </tr>
-        
-                <tr>
-                    <td >Aim_map_usp</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_snow</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_snow3</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_snow_dino</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_snow_dew</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_dustworld2010</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_dustworld2_x</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_gravemake</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_hotspot</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_icevalley</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_aztec_mini</td>
-                </tr>
-        
-                <tr>
-                    <td >fy_aztecworld</td>
-                </tr>
-        
+                    <tr>
+                      <th > Blue Discord channel</th>
+                      <td > <a class="btn btn-primary" href="https://discord.gg/kAg8Du5wd4" role="button">Join</a>  </td>
+                    </tr>
+                    <tr>
+                      <th > Red Discord channel</th>
+                      <td > <a class="btn btn-danger" href="https://discord.gg/QZBmNKd3ry" role="button">Join</a>  </td>
+                    </tr>
+                    <tr>
+                        <th > Drop box link to maps </th>
+                        <td > <a class="btn btn-primary" href="https://www.dropbox.com/sh/vvih47eaqcpd1fd/AABxQn5Du3idxTuqYKll4-VSa?dl=0" role="button">download</a> </td>
+                    </tr>
 
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > Awp Maps </th>
-            </tr>
-          </thead>
-          
-                  <tr>
-                      <td >awp_india</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_india2</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_inferno</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_fightyard</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_greatwalls</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_highrated</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_white</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_city2</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_bycaster_dust</td>
-                  </tr>
-          
-                  <tr>
-                      <td >awp_concrete</td>
-                  </tr>
-          
-                  <tr>
-                      <td >css_vietnam</td>
-                  </tr>
-          
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > 2 x 2 Maps </th>
-            </tr>
-          </thead>
-          
-                  <tr>
-                      <td >de_dust2_2x2</td>
-                  </tr>
-          
-                  <tr>
-                      <td >css_mirage2x2_go</td>
-                  </tr>
-          
-                  <tr>
-                      <td >de_inferno2x2</td>
-                  </tr>
-          
-                  <tr>
-                      <td >de_nuke2x2</td>
-                  </tr>
-          
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > Old Competitive Maps </th>
-            </tr>
-          </thead>
-          
-          <tr>
-              <td >de_dust2</td>
-          </tr>
-            
-          <tr>
-              <td >de_inferno</td>
-          </tr>
-            
-          <tr>
-              <td >de_nuke</td>
-          </tr>
-            
-          <tr>
-              <td >de_train</td>
-          </tr>
-            
-          <tr>
-              <td >de_mirage</td>
-          </tr>
-            
-          <tr>
-              <td >de_tuscan</td>
-          </tr>
-            
-          <tr>
-              <td >de_hell</td>
-          </tr>
-            
-          <tr>
-              <td >de_cbble</td>
-          </tr>
-            
-          <tr>
-              <td >de_forze</td>
-          </tr>
-            
-          <tr>
-              <td >de_aztec</td>
-          </tr>
-            
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > New Competitive Maps </th>
-            </tr>
-            </thead>
-            
-            <tr>
-                <td >css_dust2se_go</td>
-            </tr>
-            
-            <tr>
-                <td >csg_nuke</td>
-            </tr>
-            
-            <tr>
-                <td >css_mirage_go</td>
-            </tr>
-            
-            <tr>
-                <td >de_cache</td>
-            </tr>
-            
-            <tr>
-                <td >css_overpass</td>
-            </tr>
-            
-            <tr>
-                <td >css_train_go</td>
-            </tr>
-            
-            <tr>
-                <td >go_vertigo_classic</td>
-            </tr>
-            
-            <tr>
-                <td >css_cbble</td>
-            </tr>
+                    <tr>
+                        <th > clan setup</th>
+                        <td > <code>
+                            rcon exec clan.cfg
+                        </code>  </td>
+                    </tr>
+                    <tr>
+                        <th > pub setup</th>
+                        <td > <code>
+                            rcon exec pub.cfg
+                        </code>  </td>
+                    </tr>
+                    <tr>
+                        <th > change map</th>
+                        <td > <code>
+                            rcon changelevel map_name
+                        </code>  </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Maps
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
+                      <tr>
+                          <th > Fy and Aim Maps </th>
+                          <td>
+                            <p>
+                                <ul class="list-unstyled">
+                                    
+                                    <li>$3000$_b1</li>
+                                    
+                                    <li>32_aztecworld</li>
+                                    
+                                    <li>aim_headshot</li>
+                                    
+                                    <li>aim_map</li>
+                                    
+                                    <li>aim_ak-colt</li>
+                                    
+                                    <li>aim_deagle</li>
+                                    
+                                    <li>Aim_map_usp</li>
+                                    
+                                    <li>fy_snow</li>
+                                    
+                                    <li>fy_snow3</li>
+                                    
+                                    <li>fy_snow_dino</li>
+                                    
+                                    <li>fy_snow_dew</li>
+                                    
+                                    <li>fy_dustworld2010</li>
+                                    
+                                    <li>fy_dustworld2_x</li>
+                                    
+                                    <li>fy_gravemake</li>
+                                    
+                                    <li>fy_hotspot</li>
+                                    
+                                    <li>fy_icevalley</li>
+                                    
+                                    <li>fy_aztec_mini</li>
+                                    
+                                    <li>fy_aztecworld</li>
+                                    
+                                </ul>
+                            </p>
+                          </td>
+                        
+                    </tr>
+                    
+                        <tr>
+                            <th > Old Competitive Maps </th>
+                            <td>
+                                <p> 
+                                    <ul class="list-unstyled">
+                                    
+                                    <li>de_dust2</li>
+                                    
+                                    <li>de_inferno</li>
+                                    
+                                    <li>de_nuke</li>
+                                    
+                                    <li>de_train</li>
+                                    
+                                    <li>de_mirage</li>
+                                    
+                                    <li>de_tuscan</li>
+                                    
+                                    <li>de_hell</li>
+                                    
+                                    <li>de_cbble</li>
+                                    
+                                    <li>de_forze</li>
+                                    
+                                    <li>de_aztec</li>
+                                    
+                                    </ul>
+                                    
+                                </p>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <th > New Competitive Maps </th>
+                               <td>
+                                <p> 
+                                <ul class="list-unstyled">
+                                    
+                                    <li>css_dust2se_go</li>
+                                    
+                                    <li>csg_nuke</li>
+                                    
+                                    <li>css_mirage_go</li>
+                                    
+                                    <li>de_cache</li>
+                                    
+                                    <li>css_overpass</li>
+                                    
+                                    <li>css_train_go</li>
+                                    
+                                    <li>go_vertigo_classic</li>
+                                    
+                                    <li>css_cbble</li>
+                                    
+                                </ul>
+                                </p>
+                               </td> 
+                                
+                            </tr>
+                        
             
 
-        
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > dropbox links </th>
-            </tr>
-        </thead>
-        <tr>
-            <th > maps and config </th>
-            <td > <a class="btn btn-primary" href="https://www.dropbox.com/sh/vvih47eaqcpd1fd/AABxQn5Du3idxTuqYKll4-VSa?dl=0" role="button">download</a> </td>
-        </tr>
-        <thead class="bg-dark text-light">
-            <tr>
-                <th > server config </th>
-            </tr>
-        </thead>
-        <tr>
-            <th > clan setup</th>
-            <td > <code>
-                rcon exec clan.cfg
-            </code>  </td>
-        </tr>
-        <tr>
-            <th > pub setup</th>
-            <td > <code>
-                rcon exec pub.cfg
-            </code>  </td>
-        </tr>
-        <tr>
-            <th > change map</th>
-            <td > <code>
-                rcon changelevel map_name
-            </code>  </td>
-        </tr>
-    </table>
-</div>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-dark btn-lg" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Player Stats
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" >
 
-
-<div class="table-responsive">
-    <table class="table table-bordered table-striped" style="margin-top:60px;">
-        <thead class="bg-dark text-light">
-            <tr>
-                <th> Player Stats</th>
-            </tr>
-        </thead>
-        <thead class="bg-dark text-light">
-            <tr>
-                <th class="align-middle" style="width: 10%">#</th>
-                <th class="align-middle" style="width: 25%">Name</th>
-                <th class="align-middle" style="width: 15%">Efficacy</th>
-                <th class="align-middle" style="width: 15%">Change</th>
-            </tr>
-        </thead>
-
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th class="align-middle" style="width: 10%">#</th>
+                            <th class="align-middle" style="width: 25%">Name</th>
+                            <th class="align-middle" style="width: 15%">Efficacy</th>
+                            <th class="align-middle" style="width: 15%">Change</th>
+                        </tr>
+                    </thead>
             
-                <tr>
-                    <th class="align-middle" >1</th>
-                    <td class="align-middle" >neo</td>
-                    <td class="align-middle">1.9935672001754001</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >2</th>
-                    <td class="align-middle" >Pom Pom M4n.</td>
-                    <td class="align-middle">1.9528580836351663</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >3</th>
-                    <td class="align-middle" >NoFea[r]wOw</td>
-                    <td class="align-middle">1.8200915032679739</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >4</th>
-                    <td class="align-middle" >DEE</td>
-                    <td class="align-middle">1.7688949351192969</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >5</th>
-                    <td class="align-middle" >Xhosa</td>
-                    <td class="align-middle">1.758553590010406</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >6</th>
-                    <td class="align-middle" >Secret105v</td>
-                    <td class="align-middle">1.727778167163133</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >7</th>
-                    <td class="align-middle" >r0B[i]n wOw~</td>
-                    <td class="align-middle">1.5304483586869497</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >8</th>
-                    <td class="align-middle" >Blitz</td>
-                    <td class="align-middle">1.5194919064748202</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >9</th>
-                    <td class="align-middle" >Point Blank</td>
-                    <td class="align-middle">1.4986638372603542</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >10</th>
-                    <td class="align-middle" >LeThAl</td>
-                    <td class="align-middle">1.498637246738829</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >11</th>
-                    <td class="align-middle" >alamaleste</td>
-                    <td class="align-middle">1.487728830990744</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >12</th>
-                    <td class="align-middle" >Sparky</td>
-                    <td class="align-middle">1.4771543985637343</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >13</th>
-                    <td class="align-middle" >Adheera</td>
-                    <td class="align-middle">1.4452371981503682</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >14</th>
-                    <td class="align-middle" >Roman</td>
-                    <td class="align-middle">1.4450657472738935</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >15</th>
-                    <td class="align-middle" >Hector</td>
-                    <td class="align-middle">1.4125957531256201</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >16</th>
-                    <td class="align-middle" >eXCALIBUr</td>
-                    <td class="align-middle">1.4019198312236287</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >17</th>
-                    <td class="align-middle" >&lt;&lt;OptimusPrime&gt;&gt;</td>
-                    <td class="align-middle">1.336510152284264</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >18</th>
-                    <td class="align-middle" >Glady</td>
-                    <td class="align-middle">1.313963666391412</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >19</th>
-                    <td class="align-middle" >ZeR0_CoOL</td>
-                    <td class="align-middle">1.2675882352941177</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >20</th>
-                    <td class="align-middle" >MaxSteel</td>
-                    <td class="align-middle">1.256945701357466</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >21</th>
-                    <td class="align-middle" >CSK</td>
-                    <td class="align-middle">1.2203839338452451</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >22</th>
-                    <td class="align-middle" >BerLin</td>
-                    <td class="align-middle">1.2082859603789835</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >23</th>
-                    <td class="align-middle" >Ethan</td>
-                    <td class="align-middle">1.1710416666666665</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-                <tr>
-                    <th class="align-middle" >24</th>
-                    <td class="align-middle" >Skull_Crusher</td>
-                    <td class="align-middle">1.041449814126394</td>
-                    <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
-                </tr>
-            
-    </table>
-</div>
+                        
+                            <tr>
+                                <th class="align-middle" >1</th>
+                                <td class="align-middle" >neo</td>
+                                <td class="align-middle">2.0035883989726027</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >2</th>
+                                <td class="align-middle" >Pom Pom M4n.</td>
+                                <td class="align-middle">1.9528580836351663</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >3</th>
+                                <td class="align-middle" >NoFea[r]wOw</td>
+                                <td class="align-middle">1.8200915032679739</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >4</th>
+                                <td class="align-middle" >DEE</td>
+                                <td class="align-middle">1.768799835593917</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >5</th>
+                                <td class="align-middle" >Xhosa</td>
+                                <td class="align-middle">1.7585309807139926</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >6</th>
+                                <td class="align-middle" >Secret105v</td>
+                                <td class="align-middle">1.7277086546700944</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >7</th>
+                                <td class="align-middle" >r0B[i]n wOw~</td>
+                                <td class="align-middle">1.5303969754253308</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >8</th>
+                                <td class="align-middle" >Blitz</td>
+                                <td class="align-middle">1.5194490725313785</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >9</th>
+                                <td class="align-middle" >LeThAl</td>
+                                <td class="align-middle">1.5088967009194159</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >10</th>
+                                <td class="align-middle" >Point Blank</td>
+                                <td class="align-middle">1.4986337460408867</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >11</th>
+                                <td class="align-middle" >alamaleste</td>
+                                <td class="align-middle">1.4876743398781314</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >12</th>
+                                <td class="align-middle" >Sparky</td>
+                                <td class="align-middle">1.4770151245551602</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >13</th>
+                                <td class="align-middle" >Roman</td>
+                                <td class="align-middle">1.4452405579062844</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >14</th>
+                                <td class="align-middle" >Adheera</td>
+                                <td class="align-middle">1.4450923885404305</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >15</th>
+                                <td class="align-middle" >Hector</td>
+                                <td class="align-middle">1.4125687352710135</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >16</th>
+                                <td class="align-middle" >eXCALIBUr</td>
+                                <td class="align-middle">1.3915592515592516</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >17</th>
+                                <td class="align-middle" >&lt;&lt;OptimusPrime&gt;&gt;</td>
+                                <td class="align-middle">1.336510152284264</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >18</th>
+                                <td class="align-middle" >Glady</td>
+                                <td class="align-middle">1.3140437158469944</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >19</th>
+                                <td class="align-middle" >ZeR0_CoOL</td>
+                                <td class="align-middle">1.2675882352941177</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >20</th>
+                                <td class="align-middle" >MaxSteel</td>
+                                <td class="align-middle">1.2561194029850746</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >21</th>
+                                <td class="align-middle" >CSK</td>
+                                <td class="align-middle">1.2203839338452451</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >22</th>
+                                <td class="align-middle" >BerLin</td>
+                                <td class="align-middle">1.2082382978723405</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >23</th>
+                                <td class="align-middle" >Ethan</td>
+                                <td class="align-middle">1.1710416666666665</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                            <tr>
+                                <th class="align-middle" >24</th>
+                                <td class="align-middle" >Skull_Crusher</td>
+                                <td class="align-middle">1.0394890510948904</td>
+                                <td class="align-middle"><img src="https://raw.githubusercontent.com/adityaarakeri/team-builder/main/static/img/constant.png" width="25" height="25" alt="constant" title="0.0"></td>
+                            </tr>
+                        
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <br>
-    <div class="text-muted">
-        Last Updated: 06-08-2021 12:20:44
+    <div class="text-muted text-center">
+        Last Updated: 06-10-2021 08:25:48
     </div>
     <br>
 
@@ -551,7 +460,7 @@
         <!-- End Page content -->
 
 
-    <footer class="footer mt-auto py-3 bg-dark text-center">
+    <footer class="footer mt-auto py-3 bg-dark text-center fixed-bottom">
             <!-- <div class="container"> -->
               <span class="text-light font-weight-light">Enter the Matrix 2021</span>
             <!-- </div> -->
