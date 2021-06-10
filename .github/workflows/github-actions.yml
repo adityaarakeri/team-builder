@@ -29,14 +29,13 @@ jobs:
       
       # Install dependencies from pipenv
       - name: Install dependecies
-        uses: VaultVulp/action-pipenv@v2.0.1
         with:
-          command: install -d
+          command: pip3 install
       
       # Build the github pages
       - name: Build
         run: |
-          pipenv run python builder.py > docs/index.html
+          python builder.py > docs/index.html
       
       # Automatically update the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
