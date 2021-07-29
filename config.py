@@ -96,17 +96,15 @@ class Config:
         'Ethan', 
         'Skull_Crusher',
         'DEE',
-        'MaxSteel'
+        'MaxSteel',
+        'SouL HaCker'
     ]
 
     # anomalies that cause due to a player having different names
     neo_anom = [
         'neo', 
-        'neo ~', 
         'zxc', 
-        'ñeø', 
-        'zxc [DGL.mode]', 
-        'brzrkr',
+        'ñeø',
         'klu'
     ]
 
@@ -115,11 +113,31 @@ class Config:
         'Secret105v #NoSound'
     ]
 
+    dee_anom = [
+        'JacksoN^',
+        'DEE'
+    ]
+
+    nofear_anom = [
+        'NoFea[r]wOw',
+        'NoFearwOw'
+    ]
+
+    robin_anom = [
+        'r0B[i]n wOw~',
+        'r0B[i]nwOw~'
+    ]
+
     pom_anom = [
         'Pom Pom M4n.',
         'Johnny Sins!', 
-        'Johnny sins', 
-        'Viper'
+        'Johnny sins',
+        'Yella Yella!'
+    ]
+
+    xhosa_anom = [
+        'Xhosa',
+        'MessiX'
     ]
 
     # misc

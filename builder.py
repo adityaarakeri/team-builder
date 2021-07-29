@@ -69,9 +69,26 @@ def clean_map(player_map):
     # pom
     pom = conf.pom_anom
 
+    # nofear
+    nofear = conf.nofear_anom
+
+    # robin
+    robin = conf.robin_anom
+
+    # dee
+    dee = conf.dee_anom
+
+    # xhosa
+    xhosa = conf.xhosa_anom
+
+    # average scores
     neo_scores = []
     secret_scores = []
     pom_scores = []
+    nofear_scores = []
+    robin_scores = []
+    dee_scores = []
+    xhosa_scores = []
 
     for player, efficacy in player_map.items():
         if player in neo:
@@ -80,6 +97,14 @@ def clean_map(player_map):
             secret_scores.append(efficacy)
         elif player in pom:
             pom_scores.append(efficacy)
+        elif player in nofear:
+            nofear_scores.append(efficacy)
+        elif player in robin:
+            robin_scores.append(efficacy)
+        elif player in dee:
+            dee_scores.append(efficacy)
+        elif player in xhosa:
+            xhosa_scores.append(efficacy)
         else:
             updated_map[player] = efficacy
     
@@ -87,12 +112,20 @@ def clean_map(player_map):
     neo_efficacy = average(neo_scores)
     pom_efficacy = average(pom_scores)
     secret_efficacy = average(secret_scores)
+    nofear_efficacy = average(nofear_scores)
+    robin_efficacy = average(robin_scores)
+    dee_efficacy = average(dee_scores)
+    xhosa_efficacy = average(xhosa_scores)
 
     # update the map with averages
     # players to use these names going forward
     updated_map['neo'] = neo_efficacy
     updated_map['Pom Pom M4n.'] = pom_efficacy
     updated_map['Secret105v'] = secret_efficacy
+    updated_map['NoFea[r]wOw'] = nofear_efficacy
+    updated_map['r0B[i]nwOw~'] = robin_efficacy
+    updated_map['JacksoN^'] = dee_efficacy
+    updated_map['Xhosa'] = xhosa_efficacy
 
     # exists list
     # better way to find with just existing names
