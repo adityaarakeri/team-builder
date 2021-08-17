@@ -97,7 +97,8 @@ class Config:
         'Skull_Crusher',
         'DEE',
         'MaxSteel',
-        'SouL HaCker'
+        'SouL HaCker',
+        'fan of secret'
     ]
 
     # anomalies that cause due to a player having different names
